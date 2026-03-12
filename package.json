@@ -2,6 +2,13 @@
   "name": "specksolutions-website",
   "version": "0.1.0",
   "private": true,
+  "description": "Institutional website for Speck Tech Solutions, focused on software architecture, scalable systems, and technology consulting.",
+  "homepage": "https://speck-solutions.com.br",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaviSpeck/specksolutions-website.git"
+  },
+  "author": "Davi Speck",
   "scripts": {
     "dev": "next dev",
     "build": "next build --webpack",

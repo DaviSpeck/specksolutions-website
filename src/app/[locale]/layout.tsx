@@ -33,7 +33,8 @@ export async function generateMetadata({
       canonical: `${siteConfig.url}/${locale}`,
       languages: {
         en: `${siteConfig.url}/en`,
-        pt: `${siteConfig.url}/pt`
+        pt: `${siteConfig.url}/pt`,
+        "x-default": `${siteConfig.url}/${siteConfig.defaultLocale}`
       }
     },
     openGraph: {
@@ -42,10 +43,13 @@ export async function generateMetadata({
       url: `${siteConfig.url}/${locale}`,
       siteName: siteConfig.name,
       type: "website",
-      locale: locale === "pt" ? "pt_BR" : "en_US",
+      locale: siteConfig.locales[locale],
+      alternateLocale: Object.entries(siteConfig.locales)
+        .filter(([key]) => key !== locale)
+        .map(([, value]) => value),
       images: [
         {
-          url: "/og-image.svg",
+          url: siteConfig.socialImage,
           width: 1200,
           height: 630,
           alt: siteConfig.name
@@ -56,7 +60,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: content.metadataTitle,
       description: content.metadataDescription,
-      images: ["/og-image.svg"]
+      images: [siteConfig.socialImage]
     }
   };
 }
