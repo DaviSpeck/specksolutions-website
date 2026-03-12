@@ -32,6 +32,8 @@ export function ProductsSection({ locale }: ProductsSectionProps) {
                   {item.href ? (
                     <Link
                       href={item.href}
+                      target="_blank"
+                      rel="noreferrer"
                       className="interactive-button inline-flex items-center gap-2 rounded-full border border-[color:var(--line)] px-4 py-2 text-sm text-[color:var(--muted)] hover:text-[color:var(--foreground)]"
                     >
                       {item.cta}
