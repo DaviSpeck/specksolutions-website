@@ -83,3 +83,11 @@ The project is ready for Vercel deployment.
 - Build command: `npm run build`
 - Output: default Next.js output
 - Required variable for analytics: `NEXT_PUBLIC_GA_ID`
+
+## License
+
+This repository is proprietary.
+
+All rights are reserved by the author. The code, content, branding, and assets
+in this project may not be reused, copied, modified, or redistributed without
+prior written permission.
